@@ -1,0 +1,23 @@
+[
+  {
+    "question": "Find all products with a unit price greater than 33.25",
+    "db_path": "/content/drive/MyDrive/Text_2_SQL/MB/LlamaFactory/NorthWind/DB/northwind_simplified.db",
+    "SQL": "SELECT * FROM Products WHERE Products.UnitPrice > 33.25",
+    "generated": "SELECT * FROM Products WHERE Products.CategoryID2 = 2",
+    "difficulty": "simple"
+  },
+  {
+    "question": "Find the names of all customers in Versailles",
+    "db_path": "/content/drive/MyDrive/Text_2_SQL/MB/LlamaFactory/NorthWind/DB/northwind_simplified.db",
+    "SQL": "SELECT CompanyName FROM Customers WHERE Customers.City = 'Versailles'",
+    "generated": "SELECT CompanyName FROM Customers WHERE Customers.City = 'Versailles'",
+    "difficulty": "base"
+  },
+  {
+    "question": "List all orders shipped to Mexico",
+    "db_path": "/content/drive/MyDrive/Text_2_SQL/MB/LlamaFactory/NorthWind/DB/northwind_simplified.db",
+    "SQL": "SELECT * FROM Orders WHERE Orders.ShipCountry = 'Mexico'",
+    "generated": "SELECT * FROM Orders WHERE Orders.ShipCountry = 'Mexico'",
+    "difficulty": "hard"
+  }
+]

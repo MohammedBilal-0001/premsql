@@ -10,8 +10,8 @@ python = "^3.10"
 datasets = "^2.20.0"
 einops = "^0.8.0"
 black = "^24.4.2"
-fastapi = "^0.112.0"
-huggingface-hub = "^0.24.5"
+fastapi = "^0.116.0"
+huggingface-hub = "^0.30.1"
 isort = "^5.13.2"
 numpy = "^1.26.3"
 tqdm = "^4.66.4"
@@ -31,7 +31,11 @@ pillow = ">=8,<11"
 uvicorn = "^0.32.0"
 streamlit = "^1.40.0"
 kagglehub = "^0.3.3"
-
+starlette = "^0.47.0"
+transformers = "^4.43.3"
+torch = "^2.4.0"
+peft ="^0.11.1"
+trl ="^0.8.6"
 [tool.poetry.extras]
 mac = ["mlx", "mlx-lm"]
 

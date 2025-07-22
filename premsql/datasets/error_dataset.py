@@ -57,7 +57,7 @@ class ErrorDatasetGenerator:
         tokenize_model_name_or_path: Optional[str] = None,
         hf_token: Optional[str] = None,
     ) -> dict:
-        experiment_folder = Path("./experiments") or Path(experiment_folder)
+        experiment_folder = Path(experiment_folder) if experiment_folder else Path("./experiments")
         experiment_path = (
             experiment_folder / "train" / experiment_name / "error_dataset.json"
         )

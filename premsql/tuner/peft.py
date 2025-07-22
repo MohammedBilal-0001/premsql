@@ -44,8 +44,9 @@ class Text2SQLPeftTuner:
             **model_kwargs,
         )
         self.tokenizer = transformers.AutoTokenizer.from_pretrained(
-            model_name_or_path, padding_size="right", token=hf_token
+            model_name_or_path, token=hf_token
         )
+        self.tokenizer.padding_side = "right"
         self.data_collator = DataCollatorForSupervisedDataset(tokenizer=self.tokenizer)
 
         self._hf_token = hf_token

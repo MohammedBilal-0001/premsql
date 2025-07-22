@@ -55,7 +55,7 @@ class DefaultPeftArguments(TrainingArguments):
 
     load_best_model_at_end: Optional[bool] = field(default=False)
     gradient_checkpointing: Optional[bool] = field(default=True)
-    evaluation_strategy: Optional[str] = field(default="no")
+    eval_strategy: Optional[str] = field(default="no")
     optim: str = field(default="adamw_hf")
 
     max_grad_norm: Optional[bool] = field(default=0.3)

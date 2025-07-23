@@ -78,8 +78,10 @@ class Text2SQLPeftTuner:
 
         if "raw" in train_datasets[0]:
             formatting_func = lambda x: x["raw"]["prompt"]
-        else:
+        elif "prompt" in train_datasets[0]:
             formatting_func = lambda x: x["prompt"]
+        else:
+            formatting_func = None
 
         trainer = SFTTrainer(
             model=self.model,
@@ -87,7 +89,7 @@ class Text2SQLPeftTuner:
             peft_config=self.peft_config,
             tokenizer=self.tokenizer,
             args=self.training_arguments,
-            packing=True,
+            packing=False,
             formatting_func=formatting_func,
             max_seq_length=max_seq_length,
         )

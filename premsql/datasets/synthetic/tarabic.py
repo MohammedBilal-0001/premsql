@@ -94,4 +94,5 @@ class ArabicDataset(Text2SQLBaseDataset):
             dataset=self.dataset,
             model_name_or_path=model_name_or_path,
             hf_token=self.hf_token,
+            tokenize=tokenize,
         )

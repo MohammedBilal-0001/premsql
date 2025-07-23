@@ -124,7 +124,7 @@ class ErrorDatasetGenerator:
         )
 
         with open(path_to_save, "w") as json_file:
-            json.dump(error_instances, json_file, indent=4)
+            json.dump(error_instances, json_file,ensure_ascii=False, indent=4)
 
         return (
             error_instances

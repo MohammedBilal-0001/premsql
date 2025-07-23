@@ -162,6 +162,6 @@ class Text2SQLGeneratorBase(ABC):
 
             to_dump.append({**content, "generated": sql})
 
-        json.dump(to_dump, open(self.experiment_path / "predict.json", "w"), indent=4)
+        json.dump(to_dump, open(self.experiment_path / "predict.json", "w"),ensure_ascii=False, indent=4)
         logger.info(f"All responses are written to: {self.experiment_path}")
         return to_dump
